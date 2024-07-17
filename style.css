@@ -25,6 +25,9 @@ body{
     color: var(--text-color);
 }
 
+section{
+    padding: 20px 10% 20px;
+}
 
 /* ------------- ALL HEADER CODE ----------- */
 header{
@@ -37,7 +40,7 @@ header{
     align-items: center;
     justify-content: space-between;
     /* justify content degistirebilirim sonra buna bak! */
-    padding: 20px 9%;
+    padding: 20px 10%;
     /* padding degerini de yanlarda azaltabilirim bak! */
     transition: all ease .55s;
     background: var(--bg-color);
@@ -112,14 +115,10 @@ header{
 }
 
 
-
-
-
 .h-main{
     display: flex;
     align-items: center;
     vertical-align: middle;
-
 }
 
 #menu-icon{
@@ -130,28 +129,11 @@ header{
     margin: 15px;
     display: none;
 }
-
-#darkmode{
-    font-size: 20px;
-    cursor: pointer;
-    color: var(--text-color);
-    margin-left: 10px;
-    transition: all 0.5s ease-out;
-}
-
-#darkmode:hover{
-    color: #5a5454;
-}
 /* ------------- ALL HEADER CODE ----------- */
 
 
 
 /* ------------- HERO SECTION CODE ----------- */
-section{
-    padding: 80px 10% 80px;
-    /* 10%'du ama 5'e düştüm  */
-}
-
 .hero-container{
     display: flex;
     flex-direction: column;
@@ -160,59 +142,109 @@ section{
     align-content: center;
     height: 100vh;
     width: 100%;
-    margin-top: 20px;
 }
 
-.container {
-    text-align: center;
-    color: var(--text-color);
+.photo-section{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    align-items:center;
-    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
-.hero-text{
+.photo-box {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+    transition: flex-basis 0.3s ease; /* Geçiş efekti için */
+    padding: 10px;
+}
+
+.photo-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: rotate(-10deg);
+}
+
+.name-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-box h1 {
+    font-size: 3.5vw;
+    font-family: var(--other-font);
+    font-weight: 500;
+    color: var(--text-color);    
+}
+
+.job-box{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    align-self: flex-start;
-    margin-left: 20px;
 }
 
-h1 {
+.job-box h2 {
+    font-size: 2.5vw;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.job-box p {
+    font-weight: 400;
+    color: var(--text-color);
+    font-size: 1vw;
+}
+/* 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center;
+    background-color: aqua;
+} */
+
+/* .container .my-name {
     font-size: 4rem;
     font-family: var(--other-font);
-    font-weight: 400;
-    margin-right: 20px;
-}
+    font-weight: 500;
+    flex: 1;
+    color: var(--text-color);
+    background-color: rebeccapurple;
+    text-align: center;
+    
+} */
 
-.image-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-.image-wrapper img {
+/* .container img {
     width: 200px;
+    max-width: 100%;
     height: auto;
     transform: rotate(-10deg);
     object-fit: cover;
+    flex: 1;
+    background-color: red;
+} */
+
+/* .container .hero-text{
+    flex: 1;
+    text-align: center;
+    background-color: salmon;
 }
 
-h2 {
-    font-size: 4.1rem;
-    width: 100%;
+.hero-text h2 {
+    font-size: 3.5rem;
     font-weight: 500;
-    margin-bottom: 50px;
+    color: var(--text-color);
 }
 
-p {
-    margin-top: 50px;
+.hero-text p {
+    font-weight: 400;
+    color: var(--text-color);
     font-size: 1rem;
-}
+} */
 /* ------------- HERO SECTION CODE ----------- */
 
 
@@ -332,7 +364,7 @@ p {
 }
 
 #works {
-    scroll-margin-top: 30px; /* Sabit başlığın yüksekliğine uygun olarak ayarlayın */
+    scroll-margin-top: 100px; /* Sabit başlığın yüksekliğine uygun olarak ayarlayın */
 }
 /* ------------- ALL SECTION CODE ----------- */
 
@@ -353,47 +385,47 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    height: auto; /* düzenleyeceğim */
+    align-items: center;
+    flex-wrap: wrap;
     color: var(--text-color);
+    padding: 20px;
+    flex: 1;
 }
 
 .a-top-top{
-    align-self: flex-start; /* Üstte hizala */
-    margin-left: 30px;
-}
-
-.a-top-bottom{
-    align-self: flex-end; /* Üstte hizala */
-    margin-right: 150px;
+    font-size: 70px;
+    font-weight: 500;
 }
 
 .about-top img{
-    width: 450px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
 }
-
 
 .about-bottom{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    align-items: center;
+    flex-wrap: wrap;
     height: auto; /* düzenleyeceğim */
     color: var(--text-color);
-    margin-top: 20px;
+    padding: 20px;
+    flex: 1;
 }
 
 .a-bottom-top{
-    margin-left: 300px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
 }
 
 .about-bottom img {
-    width: 150px;
-    height: auto;
+    width: 300px;
+    height: 300px;
     transform: rotate(-5deg);
-    object-fit: cover;
+    object-fit: contain;
 }
 
 #about-me{
@@ -408,56 +440,63 @@ p {
 .with-me-container{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     height: 100vh;
     width: 100%;
-    
 }
 
 .with-me-left{
-    width: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding: 20px;
 }
 
 .with-me-t{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
 }
 
 .with-me-t p{
     color: var(--text-color);
-    font-size: var(--p-font);
+    font-size: 15px;
     font-weight: 400;
     margin-bottom: 10px;
 }
 
 .with-me-t h2{
     color: var(--text-color);
-    font-size: var(--big-font);
-    font-weight: 400;
-    margin-bottom: 10px;
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.with-me-b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .with-me-b ul li{
     font-size: 15px;
-    font-family: var(--other-font);
     letter-spacing: 2px;
     margin-top: 10px;
 }
 
 
 .with-me-right{
-    width: 100%;
+    flex: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .with-me-right img{
@@ -494,32 +533,36 @@ p {
 
 
 /* ------------- ALL MEDIA CODE ----------- */
-@media(max-width: 1400px){
+@media only screen and (max-width: 1400px){
     header{
-        padding: 15px 5%;
+        padding: 20px 5%;
     }
 
     section{
-        padding: 70px 5% 70px;
+        padding: 20px 5%;
     }
+
+    /* hero üclü kutuların özellikleri degistirmedim sonra bakıcam */
+    .photo-box {
+        margin: 10px; 
+        padding: 10px;
+    }
+
 }
 
 
 
-@media(max-width: 1100px){
+@media only screen and (max-width: 1100px){
+    
     header{
-        padding: 15px 2%;
+        padding: 20px 3%;
     }
-
+    
     section{
-        padding: 70px 2% 70px;
+        padding: 20px 3%;
     }
 
-    :root{
-        --h2-font: 2.3rem;
-        --p-font: 1rem;
-    }
-
+    
     .blog-content{
         grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     }
@@ -532,7 +575,16 @@ p {
 }
 
 
-@media(max-width: 1070px){
+@media only screen and (max-width: 1070px){
+    
+    header{
+        padding: 15px 3%;
+    }
+    
+    section{
+        padding: 15px 3%;
+    }
+    
     #menu-icon{
         display: block;
     }
@@ -547,7 +599,7 @@ p {
         flex-direction: column;
         background: var(--bg-color);
         border-radius: 0px 0px 20px 20px;
-        padding: 10px 0;
+        padding: 5px 0;
         box-shadow: 0px 20px 20px rgb(15 54 55 / 20%);
         clip-path: circle(144% at 0% 0%);
         transition: all .55s ease-in-out;
@@ -570,68 +622,181 @@ p {
         right: 0;
     }
 
-    section{
-        padding: 80px 5% 80px;
-        /* 10%'du ama 5'e düştüm  */
-    }
-    
-    .container {
-        flex-wrap: wrap;
-    }
-}
-
-
-@media(max-width: 700px){
-    :root{
-        --h1-font: 3.4rem;
-        --h2-font: 2rem;
-        --p-font: 15px;
-    }
-
     .blog-content{
-        gap: 4rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     }
     
-    .a-top-top{
-        margin-left: 0px;
+    .about-top{
+        padding: 10px;
     }
     
-    .a-top-bottom{
-        margin-right: 0px;
+    .about-top img{
+        width: 300px;
+        height: 300px;
     }
     
     .about-bottom{
-        flex-direction: row-reverse;
-        margin-top: 60px;
+        padding: 10px;
     }
     
-    .a-bottom-top{
-        margin-left: 0px;
+    .about-bottom img {
+        width: 300px;
+        height: 300px;
     }
 
     .with-me-left{
-        justify-content: space-evenly;
+        padding: 15px;
     }
     
     .with-me-t{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: start;
-        flex-wrap: nowrap;
-    }
-    
-    .with-me-t p{
-        margin-bottom: 0px;
+        padding: 8px;
     }
     
     .with-me-t h2{
-        margin-bottom: 0px;
+        font-size: 70px;
+    }
+    
+    .with-me-b{
+        padding: 15px;
+    }
+    
+    .with-me-b ul li{
+        font-size: 20px;
+    }
+    
+    
+    .with-me-right{
+        padding: 15px;
+    }
+    
+    .with-me-right img{
+        width: 280px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 768px) {
+    
+    /* === hero kısmının 2'li sutuna düsmesi icin var */
+    .photo-box {
+        flex-basis: calc(50% - 20px); /* İki sütunlu düzen için hesaplama */
+    }
+    
+    .photo-box img {
+        width: 70%;
+    }
+    
+    .name-box h1 {
+        font-size: 5vw; /* bunu büyüttüm sonra bakıcam */
+    }
+    
+    .job-box h2 {
+        font-size: 3.5vw; /* bunu büyüttüm sonra bakıcam */
+    }
+    
+    .job-box p {
+        font-size: 1.5vw; /* bunu büyüttüm sonra bakıcam */
+        margin-top: 15px;
+    }
+
+    header{
+        padding: 10px 3%;
+    }
+    
+    section{
+        padding: 10px 3%;
+    }
+
+    .blog-content{
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    }
+    
+    .with-me-t h2{
+        font-size: 70px;
+    }
+    
+    .with-me-b ul li{
+        margin-top: 15px;
     }
     
     .with-me-right{
-        margin-left: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
     }
+    
+    .with-me-right img{
+        width: 250px;
+    }
+
+    
+    .a-top-top{
+        font-size: 60px;
+    }
+
+    .a-bottom-top{
+        font-size: 20px;
+    }
+
+    .about-top{
+        padding: 20px;
+    }
+    
+    .about-top img{
+        width: 250px;
+        height: 250px;
+    }
+    
+    .about-bottom{
+        padding: 20px;
+    }
+    
+    .about-bottom img {
+        width: 250px;
+        height: 250px;
+    }
+
+    
+    
+}
+
+@media only screen and (max-width: 700px){
+    
+    .blog-content{
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        gap: 1rem;
+    }
+
+    .a-top-top{
+        font-size: 60px;
+    }
+
+    .a-bottom-top{
+        font-size: 18px;
+    }
+
+    .about-top{
+        padding: 10px;
+    }
+    
+    .about-top img{
+        width: 200px;
+        height: 200px;
+    }
+    
+    .about-bottom{
+        padding: 10px;
+    }
+    
+    .about-bottom img {
+        width: 200px;
+        height: 200px;
+    }
+ 
 }
 /* ------------- ALL MEDIA CODE ----------- */
 
